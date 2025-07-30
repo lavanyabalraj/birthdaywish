@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday,Sai!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      opacity: 0.8;
+      background-color:black;
+      color: white;
+      text-align: center;
+      z-index: 1;
+   
+    }
+   #overlay{ background-color: rgb(15, 20, 24);
+            opacity:0.99;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index:2;
+            display:none;
+
+   }
+    /* 🎞️ Moving Background Photo Strip */
+    .photo-strip {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      opacity: 0.3;
+    }
+
+    .scrolling-wrapper {
+      display: flex;
+      animation: scroll 60s linear infinite;
+    }
+
+    .scrolling-wrapper img {
+      height: 100vh;
+      object-fit: cover;
+      margin-right: 10px;
+   
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+
+
+    /* 🖼️ Popup Main Photo */
+    .main-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+      margin-top: 60px;
+      animation: zoomIn 1.5s ease-out;
+    }
+@keyframes zoomIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .message {
+      font-size: 1.3em;
+      margin: 20px auto;
+      max-width: 700px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 12px;
+      animation: fadeIn 2s ease-out 1s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 1em;
+      opacity: 0.8;
+    }
+.open{ 
+  border-radius: 100px;
+  color: #eae7e7;
+  width: 20px;
+  height: 20px;
+  font-size: medium;
+  position: absolute;
+  background-size: cover;
+  animation: float 4s ease-in-out infinite;
+  background-image:'yellowheart.jpg';
+  pointer-events: none;
+  z-index: 999;
+}
+@keyframes float{
+  0%{opacity: 1;
+  transform:translate(0)scale(1)
+}
+100%{
+  opacity: 0;
+  transform: translate(-200px)scale(1.5);
+}
+}
+.patta{width: 80px;height:45px;border-radius:150px;
+    box-shadow: 0cqmin;color: rgb(59, 59, 59);
+    top:700px;font-size: small;left:2px;
+    position: absolute;
+    display: block;
+
+};
+#image{ border-radius: 10px;
+            position: absolute;
+            top:10px;
+            left: 30%;
+            z-index: 2;
+            display: none;
+            width: 100px;
+            height: 100px;
+        }
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+#n1{
+    display:none;
+}
+#t1{color:rgb(66, 66, 66);position:absolute; top:350px;left: 2px;display:block;left:500px;}
+#t2{color: rgb(215, 208, 3);top:270px;position: absolute;display: block;left: 500px;shape-margin: 50px;}
+  </style>
+</head>
+<body><j2 id="n1">
+
+<!-- 🎞️ Horizontal Background -->
+<div class="photo-strip">
+  <div class="scrolling-wrapper">
+    <img src="c:\Users\HP\Downloads\InShot_20240829_231909929 (1).jpg" alt="">
+    <img src="c:\Users\HP\Downloads\IMG_20250524_131116.jpg" alt="">
+    <img src="c:\Users\HP\Downloads\IMG-20250419-WA0073.jpg" alt="">
+    <img src="c:\Users\HP\Downloads\IMG-20241030-WA0030.jpg" alt="">
+    <img src="c:\Users\HP\Downloads\IMG-20241030-WA0036.jpg" alt="">
+    <!-- Repeat for smooth loop -->
+    <img src="c:\Users\HP\Downloads\InShot_20240829_231909929 (1).jpg" alt="">
+    <img src="c:\Users\HP\Downloads\IMG_20250524_131116.jpg" alt="">
+    <img src="c:\Users\HP\Downloads\IMG-20250419-WA0073.jpg" alt="">
+  </div>
+</div>
+
+
+<!-- 🖼️ Main Front Photo -->
+<img src="c:\Users\HP\Downloads\IMG-20241212-WA0017.jpg" alt="Brother" class="main-photo">
+
+<!-- 💬 Text Content -->
+<h1>Happy Birthday, Sai! 🎂</h1>
+
+<div class="message">
+  Here’s to the most amazing Thambi in the world 🌍
+You’re not just a brother, but also the reason behind both my smiles and my tears 🤣
+May your day be filled with cake, laughter, love, and wonderful surprises! 🥳💙
+I pray to God that you don’t get a girlfriend 😜
+</div>
+
+<div class="footer">With endless love,  
+<br><strong>Your sister,Kutty Ma 💖</strong></div><br></a>
+<audio id="audios" loop>
+    <source src="c:\Users\HP\Downloads\Aazhi-Soozhndha-MassTamilan.org_1.mp3" type="audio/mp3">
+</audio>
+
+
+<p id="open" onclick="clicks()">Click here Bro</p></j2>
+<a onclick="playAudio()" class="patta" id="song">Click pandra mairu</a>
+<h1 id="t2">Summa...Lololaiku...🤣</h1>
+<t3 id="t1">unaku emmela konja pasam irundha keela, left  side paru</t3><br>
+<a  class="overlay" id="overlay" >
+<img src="c:\Users\HP\Pictures\Saikuttyma.jpg" alt="" id="image" >
+<div class="close" id="what" onclick="closePopup()">❌</div></a>
+
+<script>
+    const lav=document.getElementById("n1")
+    const ram=document.getElementById("t2")
+ const nand=document.getElementById("t1")
+
+    const tasa=document.getElementById("song")
+    function playAudio(){
+        document.getElementById("audios").play();
+        lav.style.display="block"
+        ram.style.display="none"
+        nand.style.display="none"
+        tasa.style.display="none"
+    
+    }
+    const images= document.getElementById("image")
+    const one=document.getElementById("overlay")  
+    const two=document.getElementById("what")
+    function clicks(){
+      images.style.display="block";
+      images.style.width="600px";
+      images.style.height="740px";
+      images.style.right="100px";
+      one.style.display="block";
+      two.style.display="block";
+    }
+    function closePopup() {
+       images.style.display = "none";
+       two.style.display = "none";
+        one.style.display = "none";
+}
+
+
+
+</script>
+</body>
+</html>
